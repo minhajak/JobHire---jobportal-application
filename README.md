@@ -9,12 +9,35 @@ This is a full-stack job portal application that allows users to search for jobs
 
 ## Features
 
-*   **User Authentication:** Users can sign up and log in using their email and password, or with their Google account.
-*   **Job Posting and Searching:** Companies can post jobs, and users can search for jobs based on keywords, location, and other criteria.
-*   **Real-time Chat:** Users can chat with each other in real-time.
-*   **Networking:** Users can connect with each other, follow each other, and see each other's network updates.
-*   **User Profiles:** Users can create and manage their profiles, including their education, experience, and resume.
-*   **File Uploads:** Users can upload their resumes and profile pictures.
+*   **User Authentication:**
+    *   Sign up and log in using email and password.
+    *   Sign up and log in with Google OAuth.
+    *   Password reset functionality.
+*   **Job Posting and Searching:**
+    *   Companies can post, update, and delete job listings.
+    *   Users can search for jobs using keywords and filters.
+*   **Real-time Chat:**
+    *   Users can engage in one-on-one real-time conversations.
+*   **Networking:**
+    *   Send, accept, and reject connection requests to build a professional network.
+    *   Follow other users and companies to stay updated.
+    *   View a feed of network updates.
+*   **User Profiles:**
+    *   Create and manage detailed user profiles.
+    *   Add and edit education and work experience.
+    *   Upload profile pictures and resumes.
+*   **Company Profiles:**
+    *   Companies can create and manage their own profiles.
+*   **Groups:**
+    *   Users can create and join groups based on interests or professions.
+*   **Events:**
+    *   Users can create and manage events.
+*   **Advanced Search:**
+    *   Comprehensive search functionality to find jobs, people, companies, and groups.
+*   **Role-based Access Control:**
+    *   The system supports different user roles with varying permissions (e.g., admin).
+*   **File Uploads:**
+    *   Functionality for uploading and managing files like resumes and profile pictures.
 
 ## Technologies Used
 

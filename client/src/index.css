@@ -1,0 +1,273 @@
+@import "tailwindcss";
+@import "@fontsource/dm-sans/400.css";
+@import "@fontsource/dm-sans/500.css";
+@import "@fontsource/dm-sans/700.css";
+@import "tw-animate-css";
+@import "@fontsource/inter"; 
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/700.css"; 
+
+
+@custom-variant dark (&:is(.dark *));
+
+html {
+  scrollbar-gutter: stable;
+  background-color: #FAFAFA;
+  overflow-x: hidden;
+}
+
+
+:root{
+  scroll-behavior: smooth;
+  input[type="search"]::-webkit-search-cancel-button {
+          -webkit-appearance: none;
+          appearance: none;
+          display: none;
+        }
+        
+        input[type="search"]::-ms-clear {
+          display: none;
+          width: 0;
+          height: 0;
+        }
+        
+        input[type="search"]::-ms-reveal {
+          display: none;
+          width: 0;
+          height: 0;
+        }
+  
+}
+
+@theme {
+  --color-button-blue: rgba(0, 119, 181, 1);
+  --color-button-blue-hover: rgba(0, 119, 210, 1);
+  --color-label-gary: rgba(199, 199, 199, 1);
+  --color-container-theme: rgba(250, 249, 246, 1);
+  --font-dmsans: "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --text-12: 12px;
+  --text-14: 14px;
+  --text-18: 18px;
+  --color-link-dark: rgba(0, 119, 181, 1);
+  --color-link-light: rgba(110, 168, 255, 1);
+  --text-icon: 35px;
+  --color-headline-black: rgba(32, 32, 32, 1);
+  --color-content-black: rgba(0, 0, 0, 1);
+  --mr-sm: 8px;
+  --mr-md: 16px;
+  --mr-lg: 24px;
+  --spacing-content: 2px;
+  --color-forgotpassword-theme: rgba(250, 249, 246, 1);
+  --color-bg-placeholder:background: rgba(255, 255, 255, 1);
+  --font-inter:"Inter", sans-serif;
+   --shadow-inset-sm: inset 2px 2px 6px rgba(0,0,0,0.05);
+  --shadow-inset-md: inset 6px 6px 14px rgba(0,0,0,0.08);
+  --shadow-cards:  1px 0px 8px black;
+  --shadow-outer: box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --shadow-inner:box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  --color-themewhite:rgba(250, 249, 246, 1);
+  --color-theme-green:rgba(15, 148, 35, 1);
+  --shadow-bottom: 0px 2px 1px rgba(0, 0, 0, 0.1);
+  --shadow-bottom-two: 0px 2px 3px -2px rgba(0, 0, 0, .5);
+
+  --shadow-bottom-big: 0px 0px 6px rgba(0, 0, 0, 0.5);
+
+
+  
+
+  
+
+}
+.boxshadow-card{
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25),4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+
+}
+
+
+
+@layer base {
+  html,
+  body,
+  :root {
+    font-family: var(--font-dmsans);
+
+  } /* Edge / IE: hide the built-in reveal & clear buttons */
+  input[type="password"]::-ms-reveal,
+  input[type="password"]::-ms-clear {
+    display: none;
+  }
+
+  /* WebKit/Blink (Safari / Chrome) - hide credential/autofill icons & wrapper */
+  input[type="password"]::-webkit-credentials-auto-fill-button,
+  input[type="password"]::-webkit-contacts-auto-fill-button,
+  input[type="password"]::-webkit-textfield-decoration-container {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Optionally sync Tailwind's font-sans utility to the same stack */
+  .font-sans {
+    font-family: var(--font-dmsans);
+  }
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.image-ico{
+  width: 402;
+height: 392;
+range: 0 deg;
+opacity: 1;
+
+}
+
+.image-invitation-ico {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  object-fit: cover;   /* keeps image proportion and fills box */
+}
+
+
+
+/* add to your CSS file */
+.avatar-bleed {
+  width: 56px; height: 56px;               /* match your tailwind size (w-14 h-14) */
+  border-radius: 9999px;                   /* rounded-full */
+  position: relative;
+  overflow: visible;                       /* allow image to extend outside if needed */
+}
+.avatar-bleed img {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%) scale(1.12); /* scale slightly to show more of image */
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  border-radius: 9999px;
+  display: block;
+}
+/* optional ring that sits above/beside the image but is transparent in the center */
+.avatar-bleed::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.25); /* visual ring */
+  pointer-events: none;
+}
